@@ -1,0 +1,230 @@
+/**************************************************************************************************\
+*
+* vim: ts=3 sw=3 et wrap co=100 go-=b
+*
+* Filename: "style.css"
+*
+* Project: Tetris.
+*
+* Purpose: Project stylesheet.
+*
+* Author: Tom McDonnell 2007.
+*
+\**************************************************************************************************/
+
+*
+{
+   padding: 0;
+   margin: 0;
+   cursor: default;
+}
+
+h1
+{
+   padding: 5px;
+}
+
+/* Tabs. ******************************************************************************************/
+
+div.tabsContainer
+{
+   display: inline;
+   width: 75%;
+   float: left;
+}
+
+div.tabHeadings > div
+{
+   padding-right: 5px;
+   background-color: #00ff00;
+}
+
+div.tabHeadings > div.selected
+{
+   background-color: #ff0000;
+}
+
+div.tabContents > div
+{
+   background-color: #ff0000;
+   display: inline;
+   width: 100%;
+}
+
+/* Settings and Scores tables. ********************************************************************/
+
+table.tetrisGameGuiSettingsTable,
+table.tetrisGameGuiScoresTable
+{
+   margin-left: auto;
+   margin-right: auto;
+   width: 200px;
+   font-family: sans-serif;
+   font-size: x-small;
+}
+
+table.tetrisGameGuiSettingsTable th,
+table.tetrisGameGuiSettingsTable td,
+table.tetrisGameGuiScoresTable th,
+table.tetrisGameGuiScoresTable td
+{
+   background-color: white;
+   color: black;
+}
+
+table.tetrisGameGuiSettingsTable th,
+table.tetrisGameGuiScoresTable th
+{
+   text-align: left;
+}
+
+table.tetrisGameGuiSettingsTable td,
+table.tetrisGameGuiScoresTable td
+{
+   text-align: right;
+}
+
+table.tetrisGameGuiSettingsTable input,
+table.tetrisGameGuiSettingsTable select
+{
+   width: 90%;
+}
+
+table.tetrisGameGuiSettingsTable input.startButton
+{
+   width: 100%;
+}
+
+/* Game grid table. *******************************************************************************/
+
+table.tetrisGameGuiGridTable
+{
+   border-style: solid;
+   border-width: 0px;
+   border-collapse: collapse;
+   margin-left: auto;
+   margin-right: auto;
+   height: 400px;
+   width: 200px;
+}
+
+table.tetrisGameGuiGridTable > tbody > tr > td
+{
+   border-style: solid;
+   border-width: 0px;
+}
+
+/* Enter name div. ********************************************************************************/
+
+tr > th.tetrisGameGuiGameOverTh
+{
+   background: red;
+   text-align: center;
+   font-family: sans-serif;
+   color: white;
+}
+
+/* High scores tables. ****************************************************************************/
+
+*.alignLeft
+{
+   text-align: left;
+}
+
+*.alignRight
+{
+   text-align: right;
+}
+
+*.alignCenter
+{
+   text-align: center;
+}
+
+table.resultTable
+{
+   text-align: center;
+   border-style: solid;
+   border-width: 0px;
+   border-collapse: separate;
+   border-spacing: 0px;
+   margin-left: auto;
+   margin-right: auto;
+   vertical-align: middle;
+   cursor: default;
+}
+
+table.resultTable.backh2 {background: #408000; color: white; border-spacing: 5px;}
+
+th
+{
+   background: #50a000; /* Same as h3 below. */
+   color: white;
+   overflow: hidden;
+   border-style: solid;
+   border-color: white;
+   border-width: 0px;
+}
+
+/*
+ * NOTE
+ * ----
+ * color: white; should not need to be specified in children of table,
+ * but where background is specified in children, absence of color causes warning.
+ * RULE: Whenever background is specified, must specify color also and vice-versa.
+ */
+
+table.resultTable th.colorTd
+{
+   background: #0069d2; color: white; /* th element with background of td element. */
+}
+
+/* Greens defined by RGB relationship: R = a, G = 2a, B = 0. */
+table.resultTable th.h1
+{
+   background: #306000; color: white; padding-top: 3px; padding-bottom: 3px; /* Dark  green */
+}
+
+table.resultTable th.h2
+{
+   background: #408000; color: white; padding-top: 2px; padding-bottom: 2px; /* ....  green */
+}
+
+table.resultTable th.h3d
+{
+   background: #489000; color: white; padding-top: 1px; padding-bottom: 1px; /* ....  green */
+}
+
+table.resultTable th.h3
+{
+   background: #50a000; color: white; padding-top: 1px; padding-bottom: 1px; /* ....  green */
+}
+
+table.resultTable th.h3l
+{
+   background: #58b000; color: white; padding-top: 1px; padding-bottom: 1px; /* Light green */
+}
+
+table.resultTable td
+{
+   background: #0069d2; /* Middle of td [dd, ll] range below. */
+   color: white;
+   overflow: hidden;
+   border-style: solid;
+   border-color: white;
+   border-width: 0px;
+   padding: 0px;
+}
+
+table.resultTable td.uline {text-decoration: underline;}
+table.resultTable td.nopadding {padding: 0px;}
+
+/* Sky blue defined by RGB relationship: R = 0, G = a, B = 2a. */
+table.resultTable td.dd {background: #0059b2; color: white;}
+table.resultTable td.d  {background: #0061c2; color: white;} /* Dark   sky blue (ideal #0064c8). */
+table.resultTable td.dl {background: #0069d2; color: white;} /* Medium sky blue (ideal #0069d8). */
+table.resultTable td.ld {background: #0069d2; color: white;} /* Medium sky blue (ideal #0069d8). */
+table.resultTable td.l  {background: #0071e2; color: white;} /* Light  sky blue (ideal #0074e8). */
+table.resultTable td.ll {background: #0079f2; color: white;}
+
+/*******************************************END*OF*FILE********************************************/
