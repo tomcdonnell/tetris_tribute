@@ -15,7 +15,7 @@
 
 // Includes. ///////////////////////////////////////////////////////////////////////////////////////
 
-require_once dirname(__FILE__) . '/../../library/tom/php/utils/Utils_validator.php';
+require_once dirname(__FILE__) . '/../../lib_tom/php/utils/UtilsValidator.php';
 require_once dirname(__FILE__) . '/TetrisHighScores.php';
 
 // Globally executed code. /////////////////////////////////////////////////////////////////////////
@@ -37,7 +37,7 @@ try
    switch ($header)
    {
     case 'request_high_scores':
-      Utils_validator::checkArray($payload, array('gameMode' => 'string'));
+      UtilsValidator::checkArray($payload, array('gameMode' => 'string'));
       $reply = TetrisHighScores::getHighScores
       (
          $dbc, array

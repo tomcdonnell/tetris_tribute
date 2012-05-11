@@ -15,11 +15,12 @@
 
 // Includes. ///////////////////////////////////////////////////////////////////////////////////////
 
+require_once dirname(__FILE__) . '/../../lib_tom/php/utils/UtilsValidator.php';
 require_once dirname(__FILE__) . (
-   '/../../library/tom/php/database_wrappers/high_scores/database_definitions.php'
+   '/../../lib_tom/php/database_wrappers/high_scores/database_definitions.php'
 );
 require_once dirname(__FILE__) . (
-   '/../../library/tom/php/database_wrappers/high_scores/HighScores.php'
+   '/../../lib_tom/php/database_wrappers/high_scores/HighScores.php'
 );
 
 // Class definition. ///////////////////////////////////////////////////////////////////////////////
@@ -46,7 +47,7 @@ class TetrisHighScores
     */
    public static function getHighScores(DatabaseConnection $dbc, $params)
    {
-      Utils_validator::checkArray
+      UtilsValidator::checkArray
       (
          $params, array
          (
