@@ -18,7 +18,7 @@
 function Position(row, col)
 {
    var f = 'Position()';
-   UTILS.checkArgs(f, arguments, [Number, Number]);
+   UTILS.checkArgs(f, arguments, ['number', 'number']);
 
    // Public functions. /////////////////////////////////////////////////////////////////////////
 

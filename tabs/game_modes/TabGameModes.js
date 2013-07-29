@@ -35,7 +35,7 @@ function TabGameModes()
    this.setUpdateRequired = function (bool)
    {
       var f = 'TabGameModes.setUpdateRequired()';
-      UTILS.checkArgs(f, arguments, [Boolean]);
+      UTILS.checkArgs(f, arguments, ['boolean']);
 
       updateRequired = bool;
    };
@@ -48,7 +48,7 @@ function TabGameModes()
    this.update = function (restrictions)
    {
       var f = 'TabGameModes.update()';
-      UTILS.checkArgs(f, arguments, [Object]);
+      UTILS.checkArgs(f, arguments, ['object']);
    };
 
    // Private variables. ////////////////////////////////////////////////////////////////////////

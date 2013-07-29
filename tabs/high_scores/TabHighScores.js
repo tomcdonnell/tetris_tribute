@@ -35,7 +35,7 @@ function TabHighScores()
    this.setUpdateRequired = function (bool)
    {
       var f = 'TabHighScores.setUpdateRequired()';
-      UTILS.checkArgs(f, arguments, [Boolean]);
+      UTILS.checkArgs(f, arguments, ['boolean']);
 
       updateRequired = bool;
    };
@@ -48,7 +48,7 @@ function TabHighScores()
    this.update = function (gameMode)
    {
       var f = 'TabHighScores.update()';
-      UTILS.checkArgs(f, arguments, [String]);
+      UTILS.checkArgs(f, arguments, ['string']);
 
       // Note Regarding $.ajaxSetup()
       // ----------------------------
@@ -78,7 +78,7 @@ function TabHighScores()
       try
       {
          var f = 'TabHighScores._processAjaxMessage()';
-         UTILS.checkArgs(f, arguments, [Array, String, Object]);
+         UTILS.checkArgs(f, arguments, ['array', 'string', 'object']);
          UTILS.assert(f, 0, msg.length == 2);
 
          var header  = msg[0];

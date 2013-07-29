@@ -21,9 +21,7 @@ $(document).ready
       try
       {
          var f = 'onLoadWindow()';
-         UTILS.checkArgs(f, arguments, [Function]);
-
-         DomBuilder.apply(window);
+         UTILS.checkArgs(f, arguments, ['function']);
 
          var tetrisTributePage = new TetrisTributePage();
 

@@ -41,7 +41,7 @@
  *    callbacks.drawBlock = function (block, pos, bool)
  *    {
  *       var f = 'callbacks.drawBlock()';
- *       UTILS.checkArgs(f, arguments, [Block, Position, Position]);
+ *       UTILS.checkArgs(f, arguments, ['Block', 'Position', 'Position']);
  *    };
  *
  *    /*
@@ -55,7 +55,7 @@
  *    callbacks.onStartGame = function (block, position)
  *    {
  *       var f = 'callbacks.onStartGame()';
- *       UTILS.checkArgs(f, arguments, [Block, Position]);
+ *       UTILS.checkArgs(f, arguments, ['Block', 'Position']);
  *    };
  *
  *    /*
@@ -65,7 +65,7 @@
  *    callbacks.onAddBlock = function (block)
  *    {
  *       var f = 'callbacks.onStartGame()';
- *       UTILS.checkArgs(f, arguments, [Block]);
+ *       UTILS.checkArgs(f, arguments, ['Block']);
  *    };
  *
  *    /*
@@ -74,7 +74,7 @@
  *    callbacks.onFinishGame = function (block, oldPos, newPos)
  *    {
  *       var f = 'callbacks.onFinishGame()';
- *       UTILS.checkArgs(f, arguments, [Block, Position, Position]);
+ *       UTILS.checkArgs(f, arguments, ['Block', 'Position', 'Position']);
  *    };
  *
  *    /*
@@ -83,7 +83,7 @@
  *    callbacks.onRemoveRows = function (rowNos)
  *    {
  *       var f = 'callbacks.addedBlock()';
- *       UTILS.checkArgs(f, arguments, [Array]);
+ *       UTILS.checkArgs(f, arguments, ['array']);
  *    };
  *
  *    /*
@@ -92,7 +92,7 @@
  *    callbacks.onUpdateScore = function (state)
  *    {
  *       var f = 'callbacks.onUpdateScore()';
- *       UTILS.checkArgs(f, arguments, [Object]);
+ *       UTILS.checkArgs(f, arguments, ['object']);
  *    };
  *
  *    /*
@@ -101,13 +101,13 @@
  *    callbacks.drawGameGridAtGameStart = function (gameGrid)
  *    {
  *       var f = 'callbacks.drawGameGridAtGameStart()';
- *       UTILS.checkArgs(f, arguments, [Object]);
+ *       UTILS.checkArgs(f, arguments, ['object']);
  *    }
  */
 function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
 {
    var f = 'TetrisGame()';
-   UTILS.checkArgs(f, arguments, [Number, Number, Object]);
+   UTILS.checkArgs(f, arguments, ['number', 'number', 'object']);
    UTILS.validator.checkObject
    (
       callbacks,
@@ -139,7 +139,7 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
    this.setSettingsStateAndGrid = function (newSettings)
    {
       var f = 'TetrisGame.setSettingsStateAndGrid()';
-      UTILS.checkArgs(f, arguments, [Object]);
+      UTILS.checkArgs(f, arguments, ['object']);
 
       UTILS.validator.checkObject
       (
@@ -236,7 +236,7 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
    this.rotateCurrentBlockIfPossible = function (bool)
    {
       var f = 'TetrisGame.rotateCurrentBlockIfPossible()';
-      UTILS.checkArgs(f, arguments, [Boolean]);
+      UTILS.checkArgs(f, arguments, ['boolean']);
 
       if (_state.boolPaused)
       {
@@ -297,7 +297,7 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
    this.moveCurrentBlockIfPossible = function (dr, dc)
    {
       var f = 'TetrisGame.moveCurrentBlockIfPossible()';
-      UTILS.checkArgs(f, arguments, [Number, Number]);
+      UTILS.checkArgs(f, arguments, ['number', 'number']);
 
       if (_state.boolPaused)
       {
@@ -465,7 +465,7 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
    function _findCompletedRows(startRow, finishRow)
    {
       var f = 'TetrisGame._findCompletedRows()';
-      UTILS.checkArgs(f, arguments, [Number, Number]);
+      UTILS.checkArgs(f, arguments, ['number', 'number']);
       UTILS.assert(f, 0,        0 <=  startRow &&  startRow <=     finishRow);
       UTILS.assert(f, 1, startRow <= finishRow && finishRow <= nGameGridRows);
 
@@ -504,7 +504,7 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
    function _clearCompletedRows(rowNos)
    {
       var f = 'TetrisGame._clearCompletedRows()';
-      UTILS.checkArgs(f, arguments, [Array]);
+      UTILS.checkArgs(f, arguments, ['array']);
       UTILS.assert(f, 0, rowNos.length > 0);
 
       var bottomRowWasRemoved = false;
@@ -551,7 +551,7 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
    function _updateScore(nRowsRemoved)
    {
       var f = 'TetrisGame._updateScore()';
-      UTILS.checkArgs(f, arguments, [Number]);
+      UTILS.checkArgs(f, arguments, ['number']);
       UTILS.assert(f, 0, nRowsRemoved > 0);
 
       if (_settings.gameMode == 'tetrisStreak')
@@ -596,7 +596,7 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
    function _currentBlockFits(pos)
    {
       var f = 'TetrisGame._currentBlockFits()';
-      UTILS.checkArgs(f, arguments, [Position]);
+      UTILS.checkArgs(f, arguments, ['Position']);
 
       var nRows = _state.currentBlock.getNRows();
       var nCols = _state.currentBlock.getNCols();

@@ -52,7 +52,7 @@ function TetrisGameGui()
       try
       {
          var f = 'TetrisGameGui._onKeyPress()';
-         UTILS.checkArgs(f, arguments, [Object]);
+         UTILS.checkArgs(f, arguments, ['object']);
 
          if (e.keyCode != 0)
          {
@@ -138,7 +138,7 @@ function TetrisGameGui()
       try
       {
          var f = 'TetrisGameGui._onClickStartOrPauseGame()';
-         UTILS.checkArgs(f, arguments, [Object]);
+         UTILS.checkArgs(f, arguments, ['object']);
 
          var startOrPauseGame = _inputs.buttons.startOrPauseGame;
 
@@ -261,7 +261,7 @@ function TetrisGameGui()
       try
       {
          var f = 'TetrisGameGui._onBlurStartLevelTextbox()';
-         UTILS.checkArgs(f, arguments, [Object]);
+         UTILS.checkArgs(f, arguments, ['object']);
 
          if (!UTILS.validator.validatePositiveInteger(e.target.value))
          {
@@ -287,7 +287,7 @@ function TetrisGameGui()
       try
       {
          var f = 'TetrisGameGui._onChangeJumbleHeight()';
-         UTILS.checkArgs(f, arguments, [Object]);
+         UTILS.checkArgs(f, arguments, ['object']);
 
          var settings          = _tetrisGame.getSettings();
          settings.jumbleHeight = Number(e.target.value);
@@ -307,7 +307,7 @@ function TetrisGameGui()
       try
       {
          var f = 'TetrisGameGui._onClickSubmitPlayerName()';
-         UTILS.checkArgs(f, arguments, [Object]);
+         UTILS.checkArgs(f, arguments, ['object']);
 
          _inputs.selectors.gameMode.disabled       = false;
          _inputs.textboxes.startLevel.disabled     = false;
@@ -442,7 +442,7 @@ function TetrisGameGui()
    function _setScoreItemsToDisplay(itemsToDisplay)
    {
       var f = 'TetrisGameGui._setScoreItemsToDisplay()';
-      UTILS.checkArgs(f, arguments, [Array]);
+      UTILS.checkArgs(f, arguments, ['array']);
 
       var tds = _domElements.tds;
 
@@ -474,7 +474,7 @@ function TetrisGameGui()
    function _setGameOptionsToDisplay(itemsToDisplay)
    {
       var f = 'TetrisGameGui._setGameOptionsToDisplay()';
-      UTILS.checkArgs(f, arguments, [Array]);
+      UTILS.checkArgs(f, arguments, ['array']);
 
       var trs = _domElements.trs;
 
@@ -504,7 +504,7 @@ function TetrisGameGui()
    function _setSelectedGameOptions(settings)
    {
       var f = 'TetrisGameGui._setSelectedGameOptions()';
-      UTILS.checkArgs(f, arguments, [Object]);
+      UTILS.checkArgs(f, arguments, ['object']);
 
       for (var key in settings)
       {
@@ -535,7 +535,7 @@ function TetrisGameGui()
       try
       {
          var f = 'TetrisGameGui._processAjaxMessage()';
-         UTILS.checkArgs(f, arguments, [Array, String, Object]);
+         UTILS.checkArgs(f, arguments, ['array', 'string', 'object']);
          UTILS.assert(f, 0, msg.length == 2);
 
          var header  = msg[0];
@@ -605,7 +605,7 @@ function TetrisGameGui()
       drawGameGridAtGameStart: function (gameGrid)
       {
          var f = 'TetrisGameGui._callbacks.drawGameGridAtGameStart()';
-         UTILS.checkArgs(f, arguments, [Array]);
+         UTILS.checkArgs(f, arguments, ['array']);
 
          var gameGridTrs = _domElements.tables.gameGrid.firstChild.childNodes;
          var nRows       = gameGrid.length;
@@ -641,7 +641,7 @@ function TetrisGameGui()
       drawBlock: function (block, pos, bool)
       {
          var f = 'TetrisGameGui._callbacks.drawBlock()';
-         UTILS.checkArgs(f, arguments, [Block, Position, Boolean]);
+         UTILS.checkArgs(f, arguments, ['Block', 'Position', 'boolean']);
 
          var blockColor  = (bool)? block.getColor(): _gameGridBackgroundColor;
          var blockGrid   = block.getGrid();
@@ -722,7 +722,7 @@ function TetrisGameGui()
       onRemoveRows: function (rowNos)
       {
          var f = 'TetrisGameGui._callbacks.removedRows()';
-         UTILS.checkArgs(f, arguments, [Array]);
+         UTILS.checkArgs(f, arguments, ['array']);
 
          var gameGridTrs = _domElements.tables.gameGrid.firstChild.childNodes;
 
@@ -753,7 +753,7 @@ function TetrisGameGui()
       onUpdateScore: function (state)
       {
          var f = 'TetrisGameGui._callbacks.onUpdateScore()';
-         UTILS.checkArgs(f, arguments, [Object]);
+         UTILS.checkArgs(f, arguments, ['object']);
 
          var settings          = _tetrisGame.getSettings();
          var nBlocksPerLevel   = settings.nBlocksPerLevel;

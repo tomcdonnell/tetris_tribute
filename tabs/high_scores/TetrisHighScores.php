@@ -15,12 +15,12 @@
 
 // Includes. ///////////////////////////////////////////////////////////////////////////////////////
 
-require_once dirname(__FILE__) . '/../../lib_tom/php/utils/UtilsValidator.php';
+require_once dirname(__FILE__) . '/../../../../lib/tom/php/utils/UtilsValidator.php';
 require_once dirname(__FILE__) . (
-   '/../../lib_tom/php/database_wrappers/high_scores/database_definitions.php'
+   '/../../../../lib/tom/php/database_wrappers/high_scores/database_definitions.php'
 );
 require_once dirname(__FILE__) . (
-   '/../../lib_tom/php/database_wrappers/high_scores/HighScores.php'
+   '/../../../../lib/tom/php/database_wrappers/high_scores/HighScores.php'
 );
 
 // Class definition. ///////////////////////////////////////////////////////////////////////////////

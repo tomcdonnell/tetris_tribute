@@ -35,7 +35,7 @@
 function Block(gridArg, color)
 {
    var f = 'Block()';
-   UTILS.checkArgs(f, arguments, [Array, String]);
+   UTILS.checkArgs(f, arguments, ['array', 'string']);
    UTILS.assert(f, 0, gridArg.length > 0);
    UTILS.assert(f, 1, gridArg[0].constructor == Array);
    UTILS.assert(f, 2, gridArg[0].length > 0);
@@ -87,7 +87,7 @@ function Block(gridArg, color)
    this.rotate = function (bool)
    {
       var f = 'Block.rotate()';
-      UTILS.checkArgs(f, arguments, [Boolean]);
+      UTILS.checkArgs(f, arguments, ['boolean']);
 
       _orientation += (bool)? 1: -1;
       if (_orientation >= _nUniqueOrientations) _orientation = 0;
@@ -107,7 +107,7 @@ function Block(gridArg, color)
    function _createRotatedGrid(grid)
    {
       var f = 'Block._createRotatedGrid()';
-      UTILS.checkArgs(f, arguments, [Array]);
+      UTILS.checkArgs(f, arguments, ['array']);
       UTILS.assert(f, 0, grid.length > 0);
       UTILS.assert(f, 1, grid[0].length > 0);
 

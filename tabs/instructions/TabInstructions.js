@@ -35,7 +35,7 @@ function TabInstructions()
    this.setUpdateRequired = function (bool)
    {
       var f = 'TabInstructions.setUpdateRequired()';
-      UTILS.checkArgs(f, arguments, [Boolean]);
+      UTILS.checkArgs(f, arguments, ['boolean']);
 
       updateRequired = bool;
    };
@@ -48,7 +48,7 @@ function TabInstructions()
    this.update = function (restrictions)
    {
       var f = 'TabInstructions.update()';
-      UTILS.checkArgs(f, arguments, [Object]);
+      UTILS.checkArgs(f, arguments, ['object']);
    };
 
    // Private variables. ////////////////////////////////////////////////////////////////////////

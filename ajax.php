@@ -15,10 +15,10 @@
 
 // Includes. ///////////////////////////////////////////////////////////////////////////////////////
 
-require_once dirname(__FILE__) . '/lib_tom/php/database_wrappers/high_scores/HighScores.php';
+require_once dirname(__FILE__) . '/../../lib/tom/php/database_wrappers/high_scores/HighScores.php';
 require_once dirname(__FILE__) .
 (
-   '/lib_tom/php/database_wrappers/high_scores/database_definitions.php'
+   '/../../lib/tom/php/database_wrappers/high_scores/database_definitions.php'
 );
 
 // Globally executed code. /////////////////////////////////////////////////////////////////////////

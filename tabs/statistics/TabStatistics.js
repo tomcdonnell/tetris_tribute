@@ -35,7 +35,7 @@ function TabStatistics()
    this.setUpdateRequired = function (bool)
    {
       var f = 'TabStatistics.setUpdateRequired()';
-      UTILS.checkArgs(f, arguments, [Boolean]);
+      UTILS.checkArgs(f, arguments, ['boolean']);
 
       updateRequired = bool;
    };
@@ -48,7 +48,7 @@ function TabStatistics()
    this.update = function (restrictions)
    {
       var f = 'TabStatistics.update()';
-      UTILS.checkArgs(f, arguments, [Object]);
+      UTILS.checkArgs(f, arguments, ['object']);
    };
 
    // Private variables. ////////////////////////////////////////////////////////////////////////

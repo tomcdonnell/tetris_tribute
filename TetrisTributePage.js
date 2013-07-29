@@ -38,7 +38,7 @@ function TetrisTributePage()
    this.appendChildNodes = function (body)
    {
       var f = 'TetrisTributePage.appendChildNodes()';
-      UTILS.checkArgs(f, arguments, [HTMLBodyElement]);
+      UTILS.checkArgs(f, arguments, ['HTMLBodyElement']);
 
       $(body).append(_domElements.h1s.mainHeading);
       $(body).append(_tabs.getContainerDiv()     );
@@ -57,7 +57,7 @@ function TetrisTributePage()
       try
       {
          var f = 'TetrisTributePage._onChangeSelectedTab()';
-         UTILS.checkArgs(f, arguments, [HTMLDivElement, HTMLDivElement])
+         UTILS.checkArgs(f, arguments, ['HTMLDivElement', 'HTMLDivElement'])
 
          switch (newHeadingDiv)
          {

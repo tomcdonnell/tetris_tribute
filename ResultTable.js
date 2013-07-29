@@ -44,7 +44,7 @@
 function ResultTable(data)
 {
    var f = 'ResultTable()';
-   UTILS.checkArgs(f, arguments, [Object]);
+   UTILS.checkArgs(f, arguments, ['object']);
 
    UTILS.validator.checkObject
    (
@@ -77,7 +77,7 @@ function ResultTable(data)
    this.setOnUpdateFunction = function (funct)
    {
       var f = 'ResultTable.setOnUpdateFunction()';
-      UTILS.checkArgs(f, arguments, [Function]);
+      UTILS.checkArgs(f, arguments, ['function']);
 
       onUpdateFunction = funct;
    };
@@ -115,7 +115,7 @@ function ResultTable(data)
       try
       {
          var f = 'ResultTable.onClickPrevOrNextButton()';
-         UTILS.checkArgs(f, arguments, [Object]);
+         UTILS.checkArgs(f, arguments, ['object']);
 
          that.disableAllButtons();
 
@@ -158,7 +158,7 @@ function ResultTable(data)
       try
       {
          var f = 'ResultTable.onClickSortButton()';
-         UTILS.checkArgs(f, arguments, [Object]);
+         UTILS.checkArgs(f, arguments, ['object']);
 
          that.disableAllButtons();
 
