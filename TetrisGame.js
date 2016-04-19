@@ -258,7 +258,7 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
       //
       var nRows = currentBlock.getNRows();
       var nCols = currentBlock.getNCols();
-      var ratio  = (nRows > nCols)? nRows / nCols: nCols / nRows;
+      var ratio = (nRows > nCols)? nRows / nCols: nCols / nRows;
       if (ratio > 2)
       {
          switch (nRows > nCols)
