@@ -133,9 +133,6 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
 
    // Setters. --------------------------------------------------------------------------------//
 
-   /*
-    *
-    */
    this.setSettingsStateAndGrid = function (newSettings)
    {
       var f = 'TetrisGame.setSettingsStateAndGrid()';
@@ -167,9 +164,6 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
 
    // Other functions. ------------------------------------------------------------------------//
 
-   /*
-    *
-    */
    this.start = function ()
    {
       var f = 'TetrisGame.start()';
@@ -183,9 +177,6 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
       callbacks.onStartGame();
    };
 
-   /*
-    *
-    */
    this.pause = function ()
    {
       var f = 'TetrisGame.pause()';
@@ -195,9 +186,6 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
       _state.boolPaused = true;
    };
 
-   /*
-    *
-    */
    this.unpause = function ()
    {
       var f = 'TetrisGame.unpause()';
@@ -211,9 +199,6 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
       _state.boolPaused    = false;
    };
 
-   /*
-    *
-    */
    this.finishGame = function ()
    {
       var f = 'TetrisGame.finishGame()';
@@ -323,9 +308,6 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
 
    // Private functions. ////////////////////////////////////////////////////////////////////////
 
-   /*
-    *
-    */
    function _addNewBlock()
    {
       var f = 'TetrisGame._addNewBlock()';
@@ -370,9 +352,6 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
       callbacks.onUpdateScore(_state);
    }
 
-   /*
-    *
-    */
    function _moveCurrentBlockDueToGravity(t)
    {
       try
@@ -410,9 +389,6 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
       }
    }
 
-   /*
-    *
-    */
    function _cementCurrentBlock()
    {
       var f = 'TetrisGame._cementCurrentBlock()';
@@ -459,9 +435,6 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
       return true;
    }
 
-   /*
-    *
-    */
    function _findCompletedRows(startRow, finishRow)
    {
       var f = 'TetrisGame._findCompletedRows()';
@@ -545,9 +518,6 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
       callbacks.onRemoveRows(rowNos);
    }
 
-   /*
-    *
-    */
    function _updateScore(nRowsRemoved)
    {
       var f = 'TetrisGame._updateScore()';
@@ -631,9 +601,6 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
       return true;
    }
 
-   /*
-    *
-    */
    function _setGameLevelDuringGame(newGameLevel)
    {
       var f = 'TetrisGame._setGameLevelDuringGame()';
@@ -643,9 +610,6 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
       _state.hoverPeriod = _getHoverPeriodMatchingGameLevel(_state.gameLevel);
    }
 
-   /*
-    *
-    */
    function _getHoverPeriodMatchingGameLevel(gameLevel)
    {
       var f = 'TetrisGame._getHoverPeriodMatchingGameLevel()';
@@ -657,9 +621,6 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
       return 550 * Math.exp(-0.12 * gameLevel) + 50;
    }
 
-   /*
-    *
-    */
    function _getInitialisedGameGridDependingOnSettings()
    {
       var f = 'TetrisGame._getInitialisedGameGridDependingOnSettings()';
@@ -686,9 +647,6 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
       return gameGrid;
    }
 
-   /*
-    *
-    */
    function _initStateObjectDependingOnSettings()
    {
       var f = 'TetrisGame._initStateObjectDependingOnSettings()';

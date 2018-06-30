@@ -12,9 +12,6 @@
 *
 \**************************************************************************************************/
 
-/**
- * Definition of the Position object.
- */
 function Position(row, col)
 {
    var f = 'Position()';
@@ -22,9 +19,6 @@ function Position(row, col)
 
    // Public functions. /////////////////////////////////////////////////////////////////////////
 
-   /*
-    *
-    */
    this.clone = function ()
    {
       return new Position(this.r, this.c);

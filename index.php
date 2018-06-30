@@ -13,14 +13,10 @@
 *
 \**************************************************************************************************/
 
-// Settings. ///////////////////////////////////////////////////////////////////////////////////////
-
 ini_set('display_errors'        , '1');
 ini_set('display_startup_errors', '1');
 
 error_reporting(E_ALL);
-
-// Globally executed code. /////////////////////////////////////////////////////////////////////////
 
 try
 {
@@ -33,7 +29,6 @@ try
    (
       '../../lib/tom/js/contrib/jquery/1.7/jquery_minified.js',
       '../../lib/tom/js/contrib/utils/DomBuilder.js'          ,
-//      '../../lib/tom/js/contrib/utils/firebugx.js'            ,
       '../../lib/tom/js/contrib/utils/json.js'                ,
       '../../lib/tom/js/gui_layouts/Tabs.js'                  ,
       '../../lib/tom/js/utils/AjaxPort.js'                    ,
@@ -70,8 +65,8 @@ catch (Exception $e)
  <head>
 <?php
  $unixTime = time();
- foreach ($filesJs  as $file) {echo "  <script src='$file?$unixTime'></script>\n"         ;}
- foreach ($filesCss as $file) {echo "  <link rel='stylesheet' href='$file?$unixTime' />\n";}
+ foreach ($filesJs  as $file) {echo "  <script src='$file?$unixTime'></script>\n"        ;}
+ foreach ($filesCss as $file) {echo "  <link rel='stylesheet' href='$file?$unixTime'/>\n";}
 ?>
   <title>Tom's Tetris Tribute</title>
  </head>

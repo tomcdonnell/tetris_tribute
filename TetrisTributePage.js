@@ -12,9 +12,6 @@
 *
 \**************************************************************************************************/
 
-/*
- *
- */
 function TetrisTributePage()
 {
    var f = 'TetrisTributePage()';
@@ -32,9 +29,6 @@ function TetrisTributePage()
 
    // Other public functions. -----------------------------------------------------------------//
 
-   /*
-    *
-    */
    this.appendChildNodes = function (body)
    {
       var f = 'TetrisTributePage.appendChildNodes()';
@@ -49,9 +43,6 @@ function TetrisTributePage()
 
    // Event listeners. ------------------------------------------------------------------------//
 
-   /*
-    *
-    */
    function _onChangeSelectedTab(newHeadingDiv, oldHeadingDiv)
    {
       try
@@ -84,9 +75,6 @@ function TetrisTributePage()
 
    // Other private functions. ----------------------------------------------------------------//
 
-   /*
-    *
-    */
    function _init()
    {
       var f = 'TetrisTributePage._init()';

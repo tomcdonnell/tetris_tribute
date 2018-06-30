@@ -29,7 +29,6 @@
  *    ];
  *
  * @param color {String}
- *
  *    A string in the format used by CSS to define colors.
  */
 function Block(gridArg, color)
@@ -56,9 +55,6 @@ function Block(gridArg, color)
 
    // Setters. --------------------------------------------------------------------------------//
 
-   /*
-    *
-    */
    this.setRandomOrientation = function ()
    {
       var f = 'Block.setRandomOrientation()';
@@ -76,7 +72,7 @@ function Block(gridArg, color)
 
    // Simple boolean functions. ---------------------------------------------------------------//
 
-   // Other public functions. ---00------------------------------------------------------------//
+   // Other public functions. -----------------------------------------------------------------//
 
    /*
     * Rotate the block 90 degrees, either clockwise or anti-clockwise.

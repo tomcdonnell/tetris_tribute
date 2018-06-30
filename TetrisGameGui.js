@@ -12,9 +12,6 @@
 *
 \**************************************************************************************************/
 
-/**
- * Definition of the TetrisGameGui object.
- */
 function TetrisGameGui()
 {
    var f = 'TetrisGameGui()';
@@ -44,9 +41,6 @@ function TetrisGameGui()
 
    // Event listeners. ------------------------------------------------------------------------//
 
-   /*
-    *
-    */
    function _onKeyPress(e)
    {
       try
@@ -130,9 +124,6 @@ function TetrisGameGui()
       }
    }
 
-   /*
-    *
-    */
    function _onClickStartOrPauseGame(e)
    {
       try
@@ -174,9 +165,6 @@ function TetrisGameGui()
       }
    }
 
-   /*
-    *
-    */
    function _onChangeGameModeSelector(e)
    {
       try
@@ -253,9 +241,6 @@ function TetrisGameGui()
       }
    }
 
-   /*
-    *
-    */
    function _onBlurStartLevelTextbox(e)
    {
       try
@@ -279,9 +264,6 @@ function TetrisGameGui()
       }
    }
 
-   /*
-    *
-    */
    function _onChangeJumbleHeight(e)
    {
       try
@@ -299,9 +281,6 @@ function TetrisGameGui()
       }
    }
 
-   /*
-    *
-    */
    function _onClickSubmitPlayerName(e)
    {
       try
@@ -373,9 +352,6 @@ function TetrisGameGui()
 
    // Other functions. //////////////////////////////////////////////////////////////////////////
 
-   /*
-    *
-    */
    function _init()
    {
       var f = 'TetrisGameGui._init()';
@@ -436,9 +412,6 @@ function TetrisGameGui()
       _onChangeGameModeSelector(null);
    }
 
-   /*
-    *
-    */
    function _setScoreItemsToDisplay(itemsToDisplay)
    {
       var f = 'TetrisGameGui._setScoreItemsToDisplay()';
@@ -468,9 +441,6 @@ function TetrisGameGui()
       }
    }
 
-   /*
-    *
-    */
    function _setGameOptionsToDisplay(itemsToDisplay)
    {
       var f = 'TetrisGameGui._setGameOptionsToDisplay()';
@@ -498,9 +468,6 @@ function TetrisGameGui()
       }
    }
 
-   /*
-    *
-    */
    function _setSelectedGameOptions(settings)
    {
       var f = 'TetrisGameGui._setSelectedGameOptions()';
@@ -527,9 +494,6 @@ function TetrisGameGui()
       }
    }
 
-   /*
-    *
-    */
    function _processAjaxMessage(msg, textStatus, jqXhr)
    {
       try
@@ -557,9 +521,6 @@ function TetrisGameGui()
       }
    }
 
-   /*
-    *
-    */
    function _drawGameOverSubmitNameRows()
    {
       var f = 'TetrisGameGui._drawGameOverSubmitNameRows()';
