@@ -150,7 +150,7 @@ function TetrisGame(nGameGridRows, nGameGridCols, callbacks)
          }
       );
 
-      if (!UTILS.array.hasElement(_possibleGameModes, newSettings.gameMode))
+      if (!$(_possibleGameModes).index(newSettings.gameMode))
       {
          throw new Exception(f, 'Unknown game mode "' + newSettings.gameMode + '".', '');
       }

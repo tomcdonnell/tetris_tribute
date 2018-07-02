@@ -21,9 +21,18 @@ $(document).ready
          var f = 'onLoadWindow()';
          UTILS.checkArgs(f, arguments, ['function']);
 
-         var tetrisTributePage = new TetrisTributePage();
+         var _tetrisGameGui = new TetrisGameGui();
 
-         tetrisTributePage.appendChildNodes(document.body);
+         $(document.body).append
+         (
+            DIV
+            (
+               {style: 'float: right; width: 25%;'},
+               _tetrisGameGui.getSettingsTable(),
+               _tetrisGameGui.getGameGridTable(),
+               _tetrisGameGui.getScoreTable()
+            )
+         );
       }
       catch (e)
       {

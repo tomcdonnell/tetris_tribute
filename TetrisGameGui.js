@@ -21,13 +21,9 @@ function TetrisGameGui()
 
    // Getters. --------------------------------------------------------------------------------//
 
-   this.getGameGridTable = function () {return _domElements.tables.gameGrid;};
-   this.getScoreTable    = function () {return _domElements.tables.score   ;};
-   this.getSettingsTable = function () {return _domElements.tables.settings;};
-
-   /*
-    *
-    */
+   this.getGameGridTable    = function () {return _domElements.tables.gameGrid;};
+   this.getScoreTable       = function () {return _domElements.tables.score   ;};
+   this.getSettingsTable    = function () {return _domElements.tables.settings;};
    this.getSelectedGameMode = function ()
    {
       var f = 'TetrisGameGui.getSelectedGameMode()';
@@ -485,7 +481,7 @@ function TetrisGameGui()
           case 'jumbleHeight':
             if (setting != 0)
             {
-               UTILS.DOM.selectOptionWithValue(_inputs.selectors.jumbleHeight, String(setting));
+               $(_inputs.selectors.jumbleHeight).val(String(setting));
             }
             break;
           default:
@@ -631,12 +627,16 @@ function TetrisGameGui()
        */
       onStartGame: function ()
       {
-         if ($.browser.mozilla)
+console.log('TODO: Fix this!');
+console.info('onStartGame()');
+         if (true)//$.browser.mozilla)
          {
+console.info('browser is mozilla');
             $(document).keypress(_onKeyPress);
          }
          else
          {
+console.info('browser is not mozilla');
             // Note Regarding Browser Compatibility
             // ------------------------------------
             // Keypress event does not work.in IE.  See http://stackoverflow.com/questions/492865.
@@ -841,10 +841,10 @@ function TetrisGameGui()
    $.ajaxSetup
    (
       {
-         dataType   : 'json'             ,
-         success    : _processAjaxMessage,
-         type       : 'POST'             ,
-         url        : 'ajax.php'
+         dataType: 'json'             ,
+         success : _processAjaxMessage,
+         type    : 'POST'             ,
+         url     : 'ajax.php'
       }
    );
 
