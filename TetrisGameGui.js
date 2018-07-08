@@ -629,6 +629,7 @@ function TetrisGameGui()
       {
 console.log('TODO: Fix this!');
 console.info('onStartGame()');
+         // TODO: This browser.mozilla test does not seem to work anymore.  Fix.
          if (true)//$.browser.mozilla)
          {
 console.info('browser is mozilla');
@@ -649,6 +650,7 @@ console.info('browser is not mozilla');
        */
       onFinishGame: function ()
       {
+         // TODO: This browser.mozilla test does not seem to work anymore.  Fix.
          if ($.browser.mozilla)
          {
             $(document).unbind('keypress', _onKeyPress);
