@@ -37,12 +37,11 @@ function TetrisGameGui()
 
    // Event listeners. ------------------------------------------------------------------------//
 
-   function _onKeyPress(e)
+   function _onKeyDown(e)
    {
       try
       {
-         var f = 'TetrisGameGui._onKeyPress()';
-         UTILS.checkArgs(f, arguments, ['object']);
+         var f = 'TetrisGameGui._onKeyDrown()';
 
          if (e.keyCode != 0)
          {
@@ -62,14 +61,14 @@ function TetrisGameGui()
 
              case 33: // Numeric keypad '9' (e.keyCode).
              case 34: // Numeric keypad '3' (e.keyCode).
-               // Rotate clockwise.
-               _tetrisGame.rotateCurrentBlockIfPossible(true);
+               // Rotate anticlockwise.
+               _tetrisGame.rotateCurrentBlockIfPossible(false);
                return;
 
              case 35: // Numeric keypad '1' (e.keyCode).
              case 36: // Numeric keypad '7' (e.keyCode).
-               // Rotate anticlockwise.
-               _tetrisGame.rotateCurrentBlockIfPossible(false);
+               // Rotate clockwise.
+               _tetrisGame.rotateCurrentBlockIfPossible(true);
                return;
 
              default:
@@ -125,7 +124,6 @@ function TetrisGameGui()
       try
       {
          var f = 'TetrisGameGui._onClickStartOrPauseGame()';
-         UTILS.checkArgs(f, arguments, ['object']);
 
          var startOrPauseGame = _inputs.buttons.startOrPauseGame;
 
@@ -242,7 +240,6 @@ function TetrisGameGui()
       try
       {
          var f = 'TetrisGameGui._onBlurStartLevelTextbox()';
-         UTILS.checkArgs(f, arguments, ['object']);
 
          if (!UTILS.validator.validatePositiveInteger(e.target.value))
          {
@@ -265,7 +262,6 @@ function TetrisGameGui()
       try
       {
          var f = 'TetrisGameGui._onChangeJumbleHeight()';
-         UTILS.checkArgs(f, arguments, ['object']);
 
          var settings          = _tetrisGame.getSettings();
          settings.jumbleHeight = Number(e.target.value);
@@ -282,7 +278,6 @@ function TetrisGameGui()
       try
       {
          var f = 'TetrisGameGui._onClickSubmitPlayerName()';
-         UTILS.checkArgs(f, arguments, ['object']);
 
          _inputs.selectors.gameMode.disabled       = false;
          _inputs.textboxes.startLevel.disabled     = false;
@@ -467,7 +462,6 @@ function TetrisGameGui()
    function _setSelectedGameOptions(settings)
    {
       var f = 'TetrisGameGui._setSelectedGameOptions()';
-      UTILS.checkArgs(f, arguments, ['object']);
 
       for (var key in settings)
       {
@@ -627,22 +621,7 @@ function TetrisGameGui()
        */
       onStartGame: function ()
       {
-console.log('TODO: Fix this!');
-console.info('onStartGame()');
-         // TODO: This browser.mozilla test does not seem to work anymore.  Fix.
-         if (true)//$.browser.mozilla)
-         {
-console.info('browser is mozilla');
-            $(document).keypress(_onKeyPress);
-         }
-         else
-         {
-console.info('browser is not mozilla');
-            // Note Regarding Browser Compatibility
-            // ------------------------------------
-            // Keypress event does not work.in IE.  See http://stackoverflow.com/questions/492865.
-            $(document).keydown(_onKeyPress);
-         }
+         $(document).keydown(_onKeyDown);
       },
 
       /*
@@ -650,18 +629,7 @@ console.info('browser is not mozilla');
        */
       onFinishGame: function ()
       {
-         // TODO: This browser.mozilla test does not seem to work anymore.  Fix.
-         if ($.browser.mozilla)
-         {
-            $(document).unbind('keypress', _onKeyPress);
-         }
-         else
-         {
-            // Note Regarding Browser Compatibility
-            // ------------------------------------
-            // Keypress event does not work.in IE.  See http://stackoverflow.com/questions/492865.
-            $(document).unbind('keydown', _onKeyPress);
-         }
+         $(document).unbind('keydown', _onKeyDown);
 
          var button      = _inputs.buttons.startOrPauseGame;
          button.value    = 'Start Game';
